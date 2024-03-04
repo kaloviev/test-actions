@@ -17,7 +17,7 @@ jobs:
       id: check-weekend
       run: |
         day=$(date +'%u')  # %u returns the day of the week (1 for Monday, 7 for Sunday)
-        if [ "$day" -gt 5 ]; then
+        if [ "$day" -gt 0 ]; then
           echo "skip=true" >> $GITHUB_OUTPUT
         else
           echo "skip=false" >> $GITHUB_OUTPUT
